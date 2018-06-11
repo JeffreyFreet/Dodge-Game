@@ -1,0 +1,29 @@
+﻿<Window x:Class="FinalProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="Dodge!" Height="500" Width="300"
+        ResizeMode="NoResize" KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21"/>
+            <RowDefinition Height="547*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Height="21" VerticalAlignment="Top">
+            <Menu>
+                <MenuItem Header="File">
+                    <MenuItem Header="New Game" Click="newGame_Click"></MenuItem>
+                    <MenuItem Header="Quit" Click="quit_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Help">
+                    <MenuItem Header="About" Click="about_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Canvas Name="playField"></Canvas>
+        <Label x:Name="lblScore" Content="0" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
